@@ -6,4 +6,17 @@
     wp_enqueue_style('myTheme_main_styles' , get_stylesheet_uri('style.css'));
   }
   add_action('wp_enqueue_scripts' , 'mytheme_files');
+
+
+// Add page title on favicon place
+
+  function page_features() {
+    add_theme_support('title-tag');
+  }
+  
+
+  add_action('after_setup_theme', 'page_features');
+
+
  ?>
+
