@@ -11,6 +11,7 @@
 // Add page title on favicon place
 
   function page_features() {
+    register_nav_menu('headerMenuLocation', 'Header Menu Location'); //this is to register new nav menu from wp
     add_theme_support('title-tag');
   }
   
