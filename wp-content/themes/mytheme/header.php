@@ -15,13 +15,14 @@
         <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
         <div class="site-header__menu group">
           <nav class="main-navigation">
-            <!-- <ul>
-              <li><a href="">About Us</a></li>
+            <ul>
+
+              <li <?php if(is_page('about-us')) echo 'class="current-menu-item"';?>><a href="<?php echo site_url('/about-us')?>">About Us</a></li>
               <li><a href="">Programs</a></li>
               <li><a href="#">Events</a></li>
               <li><a href="#">Campuses</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul> -->
+              <li <?php if(get_post_type()=='post') echo 'class="current-menu-item"';?>><a href="<?php echo site_url('/blog')?>">Blog</a></li>
+            </ul>
 
             <?php wp_nav_menu(array(
                   'theme_location' => 'headerMenuLocation'
