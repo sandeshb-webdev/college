@@ -20,3 +20,24 @@
 
 
 
+  // to change the how the events are displayed in its own archive page
+  function uni_adjust_queries($query){
+    $today = date('Ymd');
+    if(!is_admin() AND is_post_type_archive('events') AND $query->is_main_query()){
+      $query -> set('meta_key','event_date');
+      $query -> set('orderby', 'meta_value_num');
+      $query -> set('order','ASC');
+      $query -> set('meta_query', array(
+                array(
+                  'key' => 'event_date',
+                  'compare' => '>=',
+                  'value' => $today,
+                  'type' => 'numeric'
+                )
+        ));
+    };
+  }
+  add_action('pre_get_posts', 'uni_adjust_queries');
+
+
+
