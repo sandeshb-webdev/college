@@ -1,18 +1,14 @@
 <!-- Its working with just this html also.
       have a look at it once properly-->
       <!-- 0000000000000000000000000 -->
-    <!-- <h1><?php echo the_title() ?></h1>
-    <p><?php echo the_content() ?></p> -->
+   
 <!-- 00000000000000000000000000000000000000000 -->
 
 <?php 
-    $singleProgram = new WP_Query(array(
-      'posts_per_page' => 10,
-      'post_type' => 'program'
-            ));
+   
     get_header();
-      while ($singleProgram -> have_posts()) {
-       $singleProgram -> the_post(); ?>
+      while (have_posts()) {
+       the_post(); ?>
         <div class="page-banner">
           <div class="page-banner__bg-image"
             style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg');?>);"></div>
