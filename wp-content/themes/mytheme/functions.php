@@ -23,6 +23,13 @@
   // to change the how the events are displayed in its own archive page
   function uni_adjust_queries($query){
     $today = date('Ymd');
+    if(!is_admin() AND is_post_type_archive('program') AND $query->is_main_query()){
+      $query -> set('orderby', 'title');
+      $query -> set('order','ASC');
+      $query -> set('posts_per_page', -1);
+
+    };
+
     if(!is_admin() AND is_post_type_archive('events') AND $query->is_main_query()){
       $query -> set('meta_key','event_date');
       $query -> set('orderby', 'meta_value_num');
