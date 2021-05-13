@@ -34,6 +34,9 @@
           ?>
    
 </div>
+<div>
+  <p><a href="<?php echo site_url('/past-events'); ?>">Check out our past events</a></p>
+</div>
 
   <?php get_footer();
   
