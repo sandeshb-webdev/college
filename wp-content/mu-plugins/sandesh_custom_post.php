@@ -35,5 +35,20 @@ function sandesh_own_custom_event(){
     )
   ));
 
+  // PROFESSORS POST TYPE
+  register_post_type('professor',array(
+    'supports' => array('title', 'editor'),
+    'public' => true,
+    'menu_icon' => 'dashicons-welcome-learn-more',
+    'labels' => array(
+      'name' => 'Professors',
+      'add_new_item' => 'Add new Professor',
+      'edit_item' => 'Edit Professor',
+      'all_items' => 'All Professor',
+      'singular_name' => 'Professor'
+    )
+  ));
+
+
 }
 add_action('init', 'sandesh_own_custom_event');
