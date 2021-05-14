@@ -15,6 +15,7 @@
     register_nav_menu('footerMenuLocationOne', 'Footer Menu Location One'); 
     register_nav_menu('footerMenuLocationTwo', 'Footer Menu Location two'); 
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
   }
   add_action('after_setup_theme', 'page_features');
 

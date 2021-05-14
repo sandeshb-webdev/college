@@ -37,7 +37,7 @@ function sandesh_own_custom_event(){
 
   // PROFESSORS POST TYPE
   register_post_type('professor',array(
-    'supports' => array('title', 'editor'),
+    'supports' => array('title', 'editor', 'thumbnail'),
     'public' => true,
     'menu_icon' => 'dashicons-welcome-learn-more',
     'labels' => array(
