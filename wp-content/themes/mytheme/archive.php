@@ -1,5 +1,7 @@
 <?php
-  get_header();?>
+  get_header();
+  pageBanner();
+  ?>
 
   <div class="page-banner">
   <div class="page-banner__bg-image"
