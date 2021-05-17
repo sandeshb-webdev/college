@@ -1,11 +1,13 @@
 <?php
   get_header();
   pageBanner(array(
-    'title' => 'Check the Programs',
-    'subtitle' => 'Enroll for any program of your liking',
+    'title' => 'Check our Campuses',
+    'subtitle' => 'You will be in the location accordingly',
     
   ));
   ?>
+
+ 
 
 <div class="container container--narrow page-section"> 
   <ul class="link-list min-list">

@@ -3,6 +3,22 @@
 
 // Add custom post type like events or etc on wordpress.
 function sandesh_own_custom_event(){
+  // CAMPUS POST TYPE
+  register_post_type('campus',array(
+    'supports' => array('title', 'editor'),
+    'rewrite' => array('slug' => 'campuses'),
+    'has_archive' => true,
+    'public' => true,
+    'menu_icon' => 'dashicons-location-alt',
+    'labels' => array(
+      'name' => 'Campuses',
+      'add_new_item' => 'Add new Campus',
+      'edit_item' => 'Edit Campus',
+      'all_items' => 'All Campuses',
+      'singular_name' => 'Campus'
+    )
+  ));
+
   // EVENT POST TYPE
   register_post_type('events',array(
     'supports' => array('title', 'editor', 'excerpt'),

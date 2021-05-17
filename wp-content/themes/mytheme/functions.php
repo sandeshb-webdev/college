@@ -83,3 +83,11 @@ array(
 };
 }
 add_action('pre_get_posts', 'uni_adjust_queries');
+
+// Google Map api
+
+function universityMapKey($api){
+  $api['key'] = 'AIzaSyCRpYTP59E_Ubt0NDEbLp67lMijjXtdlFc';
+  return $api;
+}
+add_filter('acf/fields/google_map/api', 'universityMapKey');
